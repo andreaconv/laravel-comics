@@ -1,0 +1,92 @@
+footer{
+    // TODO: trovare il percorso dell'immagine
+    .myFooterTop{
+        background-image: url('../assets/img/footer-bg.jpg');
+        background-size: cover;
+        overflow: hidden;
+
+        .container{
+          display: flex;
+          height: 100%;
+
+          .col{
+            display: inline-block;
+            width: 15%;
+            padding: 3rem 0;
+
+            li:first-child a{
+              color: white;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 1.2rem;
+              margin-bottom: 1rem;
+            }
+
+            li a{
+              color: $lightgray-color;
+              margin-bottom: .3rem;
+              font-size: .9rem;
+              text-transform: capitalize;
+
+              &:hover{
+                color: white;
+                cursor: pointer;
+              }
+            }
+
+            li:last-child{
+              margin-bottom: 1rem;
+            }
+          }
+
+          .image{
+            position: relative;
+
+            img{
+              position: absolute;
+              left: 150px;
+              scale: 1.5;
+            }
+          }
+        }
+      }
+
+      .myFooterBottom{
+        background-color: $darkgray-color;
+
+        .container{
+          @include centerFlex('between');
+          padding: 2rem 0;
+          .btn a{
+            border: 2px solid $primary-color;
+            color: white;
+            padding: 10px 12px;
+
+            &:hover{
+              border: 2px solid white;
+              color: $darkgray-color;
+              background-color: $primary-color;
+            }
+          }
+
+          .cta{
+            @include centerFlex('vertical');
+
+            span{
+              color: $primary-color;
+              font-weight: bold;
+              margin-right: 1rem;
+              font-size: 1.2rem;
+            }
+            li{
+              display: inline-block;
+              margin: 0 10px;
+
+              &:hover img{
+                scale: 1.2;
+              }
+            }
+          }
+        }
+      }
+}

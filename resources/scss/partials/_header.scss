@@ -1,0 +1,50 @@
+header{
+    height: 100px;
+    // debug
+    // background-color: #1a1a1a;
+    // color: white;
+
+    .container{
+        @include centerFlex('between');
+        height: 100%;
+      }
+
+      .image{
+        height: 70%;
+
+        img{
+          height: 100%;
+        }
+      }
+
+      li{
+        display: inline-block;
+        text-transform: uppercase;
+        margin-right: 2rem;
+        position: relative;
+        cursor: pointer;
+
+        a{
+          color: $gray-color;
+          font-weight: bold;
+          font-size: .8rem;
+        }
+        a:hover{
+          color: $primary-color;
+        }
+        &.active{
+          color: $primary-color;
+
+          &::after{
+            position: absolute;
+            bottom: -41px;
+            left: 50%;
+            content: "";
+            background-color: $primary-color;
+            width: 60%;
+            height: 3px;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+}
