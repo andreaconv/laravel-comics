@@ -1,0 +1,53 @@
+.fumetto{
+  background-color: $black-color;
+
+  .container{
+    @include centerFlex('between');
+    padding: 20px 0;
+    color: white;
+
+    .single-comics{
+      height: 700px;
+
+      img{
+        aspect-ratio: 2 / 3;
+        height: 100%;
+      }
+    }
+
+    .details{
+      padding: 0 50px;
+      text-align: center;
+
+      h1{
+        margin-bottom: 3rem;
+        color: $lightgray-color;
+      }
+
+      p{
+        margin-bottom: 2rem;
+      }
+
+      table{
+        border: 1px solid $lightgray-color;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 0 auto;
+
+        tr{
+          border-bottom: 1px solid $lightgray-color;
+        }
+
+        th{
+          color: $primary-color;
+          width: 20%;
+        }
+        td{
+          padding: 0 10px;
+        }
+      }
+    }
+
+  }
+
+}
