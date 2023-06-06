@@ -6,7 +6,7 @@ return [
     'text' => 'characters'
   ],
   [
-    'link' => '#',
+    'link' => 'comics',
     'text' => 'comics'
   ],
   [

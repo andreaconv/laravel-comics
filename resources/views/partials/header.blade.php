@@ -7,7 +7,7 @@
     <div class="container">
 
         <div class="image">
-            <a href="#"><img src="{{ Vite::asset('public/img/dc-logo.png') }}" alt="logo"></a>
+            <a href="{{ route('home')}}"><img src="{{ Vite::asset('public/img/dc-logo.png') }}" alt="logo"></a>
         </div>
 
         {{-- per la calsse active --}}
@@ -15,7 +15,7 @@
 
         <ul>
           @foreach ($menu as $item)
-            <li class=""><a href="#">{{ $item['text'] }}</a></li>
+            <li class="{{ Route::currentRouteName() === $item['text'] ? 'active' : ''  }}"><a href="{{ $item['link'] }}">{{ $item['text'] }}</a></li>
           @endforeach
         </ul>
 
