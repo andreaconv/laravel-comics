@@ -22,6 +22,17 @@ Route::get('/comics', function () {
   return view('comics', compact('comics'));
 })->name('comics');
 
-Route::get('/fumetto', function () {
-  return view('fumetto');
+Route::get('/fumetto/{slug}', function ($slug) {
+
+  $comics = config('comics');
+  $comicsFiltered = array_filter($comics, fn($fumetto) => $fumetto['slug'] === $slug);
+
+  $fumetto = $comicsFiltered[array_key_first($comicsFiltered)];
+
+  return view('fumetto', compact('fumetto'));
 })->name('fumetto');
+
+
+Route::get('/nopage', function () {
+  return view('nopage');
+})->name('#');

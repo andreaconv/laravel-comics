@@ -15,7 +15,11 @@
 
         <ul>
           @foreach ($menu as $item)
-            <li class="{{ Route::currentRouteName() === $item['text'] ? 'active' : ''  }}"><a href="{{ $item['link'] }}">{{ $item['text'] }}</a></li>
+            <li
+              class="{{ Route::currentRouteName() === $item['text'] ? 'active' : ''  }}"><a
+              href="{{ route($item['link']) }}">{{
+              $item['text']
+              }}</a></li>
           @endforeach
         </ul>
 

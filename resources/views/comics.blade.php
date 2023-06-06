@@ -11,7 +11,7 @@
       <div class="main-wrapper">
 
         @foreach ($comics as $item)
-          <div class="card"> <a href="#"><img src="{{$item['thumb']}}"></a> <span>{{$item['title']}}</span> </div>
+          <div class="card"> <a href="{{ route('fumetto', ['slug' => $item['slug']])  }}"><img src="{{$item['thumb']}}"></a> <span>{{$item['title']}}</span> </div>
         @endforeach
 
 
