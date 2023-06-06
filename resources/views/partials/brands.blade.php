@@ -1,19 +1,15 @@
+@php
+  $menu = config('brands-menu');
+@endphp
+
 <div class="brands">
 
     <div class="container">
 
       <ul>
-        <li><a href="#"><img src="/img/buy-comics-digital-comics.png" alt=""></a></li>
-        <li><a href="#"><img src="/img/buy-comics-digital-comics.png" alt=""></a></li>
-        <li><a href="#"><img src="/img/buy-comics-digital-comics.png" alt=""></a></li>
-        <li><a href="#"><img src="/img/buy-comics-digital-comics.png" alt=""></a></li>
-        <li><a href="#"><img src="/img/buy-dc-power-visa.svg" alt=""></a></li>
-        {{-- <li
-            v-for="(link, index) in brands"
-            :key="index">
-          <img :src="link.path">
-          <a href="#">{{link.text}}</a>
-        </li> --}}
+        @foreach ( $menu as $item )
+          <li><img src="{{$item['path']}}" alt=""><a href="#">{{$item['text']}}</a></li>
+        @endforeach
       </ul>
 
     </div>

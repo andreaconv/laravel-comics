@@ -1,4 +1,10 @@
+@php
+  $menu = config('footer-menu');
+@endphp
+
 <footer>
+
+  {{-- @dd($menu) --}}
 
     <div class="myFooterTop">
 
@@ -6,50 +12,31 @@
 
           <div class="col">
             <ul>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              {{-- <li
-                v-for="(link, index) in dcComics"
-                :key="index"><a href="#">{{link.text}}</a>
-              </li> --}}
+              @foreach ($menu['dcComics'] as $item)
+                <li><a href="#">{{ $item['text'] }}</a></li>
+              @endforeach
             </ul>
 
             <ul>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              {{-- <li
-                v-for="(link, index) in shop"
-                :key="index"><a href="#">{{link.text}}</a>
-              </li> --}}
+              @foreach ($menu['shop'] as $item)
+                <li><a href="#">{{ $item['text'] }}</a></li>
+              @endforeach
             </ul>
           </div>
 
           <div class="col">
             <ul>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              {{-- <li
-                v-for="(link, index) in dc"
-                :key="index"><a href="#">{{link.text}}</a>
-              </li> --}}
+              @foreach ($menu['dc'] as $item)
+                <li><a href="#">{{ $item['text'] }}</a></li>
+              @endforeach
             </ul>
           </div>
 
           <div class="col">
             <ul>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-                <li><a href="#">item</a></li>
-              {{-- <li
-                v-for="(link, index) in sites"
-                :key="index"><a href="#">{{link.text}}</a>
-              </li> --}}
+              @foreach ($menu['sites'] as $item)
+                <li><a href="#">{{ $item['text'] }}</a></li>
+              @endforeach
             </ul>
           </div>
 
@@ -73,11 +60,9 @@
             <span>FOLLOW US</span>
 
             <ul>
-                <li><a href="#"><img src="/img/footer-facebook.png" alt=""></a></li>
-                <li><a href="#">social</a></li>
-                <li><a href="#">social</a></li>
-              {{-- <li v-for="(link, index) in cta"
-                :key="index"><a href="#"><img :src="link.path"></a></li> --}}
+              @foreach ($menu['cta'] as $item)
+                <li><a href="#"><img src="{{ $item['path'] }}" alt=""></a></li>
+              @endforeach
             </ul>
 
           </div>
