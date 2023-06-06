@@ -1,7 +1,7 @@
 footer{
     // TODO: trovare il percorso dell'immagine
     .myFooterTop{
-        background-image: url('../assets/img/footer-bg.jpg');
+        background-image: url('/public/img/footer-bg.jpg');
         background-size: cover;
         overflow: hidden;
 
@@ -45,7 +45,7 @@ footer{
             img{
               position: absolute;
               left: 150px;
-              scale: 1.5;
+            //   scale: 1.5;
             }
           }
         }

@@ -55,7 +55,7 @@
 
 
           <div class="image">
-            <img src="../assets/img/dc-logo-bg.png" alt="">
+            <img src="/img/dc-logo-bg.png" alt="">
           </div>
 
         </div>
@@ -73,7 +73,7 @@
             <span>FOLLOW US</span>
 
             <ul>
-                <li><a href="#">social</a></li>
+                <li><a href="#"><img src="/img/footer-facebook.png" alt=""></a></li>
                 <li><a href="#">social</a></li>
                 <li><a href="#">social</a></li>
               {{-- <li v-for="(link, index) in cta"
